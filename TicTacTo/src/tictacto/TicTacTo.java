@@ -49,7 +49,7 @@ class MainFrame extends JFrame implements MouseListener
     {
         for(int i=0; i<3; i++){ if(l[i][0].getText().equals(l[i][1].getText())&&l[i][1].getText().equals(l[i][2].getText())) flag=1;}
         for(int i=0; i<3; i++){ if(l[0][i].getText().equals(l[1][i].getText())&&l[1][i].getText().equals(l[2][i].getText())) flag=1;}
-        if((l[0][0].getText().equals(l[1][1].getText())&&l[1][1].getText().equals(l[2][2].getText()))||(l[0][2].getText().equals(l[1][1].getText())&&l[1][1].getText().equals(l[0][2].getText())))
+        if((l[0][0].getText().equals(l[1][1].getText())&&l[1][1].getText().equals(l[2][2].getText()))||(l[0][2].getText().equals(l[1][1].getText())&&l[1][1].getText().equals(l[2][0].getText())))
             flag=1;
     }
     
@@ -69,6 +69,7 @@ class MainFrame extends JFrame implements MouseListener
                 status.setText("O won!");
             add(status, BorderLayout.CENTER);
             p.setVisible(false);
+            counter--;
         }
         counter++;
         if(counter==9)
